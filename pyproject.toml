@@ -1,0 +1,94 @@
+# https://python-poetry.org/docs/pyproject/
+
+# PROJECT
+
+[tool.poetry]
+name = "finances"
+version = "0.1.0"
+description = "Stocks data collection and its quantitative analysis."
+repository = "https://github.com/jmquintana79/finances"
+documentation = "https://jmquintana79.github.io/finances/"
+authors = ["Juan Quintana <juan.armaguedon@icloud.com>"]
+readme = "README.md"
+license = "MIT License"
+packages = [{ include = "finances", from = "src" }]
+
+# SCRIPTS
+
+[tool.poetry.scripts]
+finances = "finances.scripts:main"
+
+# DEPENDENCIES
+
+[tool.poetry.dependencies]
+python = "^3.11"
+setuptools = "^71.1.0"
+python-dotenv = "*"
+numpy = "*"
+scipy = "*"
+pandas = "*"
+scikit-learn = "*"
+statsmodels = "*"
+pyarrow = "*"
+matplotlib = "*"
+seaborn = "*"
+pandera = "*"
+prefect = ">=2.0,<3.0"
+feature-engine = "*"
+invoke = "^2.2.0"
+yfinance = "*"
+clean-text = "*"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.10.1"
+ruff = "^0.5.0"
+commitizen = "^3.27.0"
+pdoc = ">=8.0.0,<15.0.0"
+interrogate = "^1.7.0"
+ipykernel = "^6.29.4"
+nbformat = "^5.10.4"
+
+[tool.poetry.group.tests.dependencies]
+pytest = "^8.2.2"
+
+
+# CONFIGURATIONS
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "pep440"
+version_provider = "poetry"
+update_changelog_on_bump = true
+
+[tool.mypy]
+pretty = true
+strict = true
+python_version = "3.11"
+check_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "--verbosity=2"
+pythonpath = ["src"]
+
+[tool.ruff]
+fix = true
+indent-width = 4
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["D100", "D103"]
+
+# SYSTEMS
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
