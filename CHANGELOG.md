@@ -1,3 +1,9 @@
+## v0.2.0 (2026-04-11)
+
+### Feat
+
+- **io.datasets.FinanceDatabase.symbols**: tool to load symbols from FinanceDatabase and save in local
+
 ## v0.1.1 (2026-03-28)
 
 ### Refactor

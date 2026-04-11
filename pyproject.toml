@@ -4,7 +4,7 @@
 
 [tool.poetry]
 name = "finances"
-version = "0.1.1"
+version = "0.2.0"
 description = "Stocks data collection and its quantitative analysis."
 repository = "https://github.com/jmquintana79/finances"
 documentation = "https://jmquintana79.github.io/finances/"
