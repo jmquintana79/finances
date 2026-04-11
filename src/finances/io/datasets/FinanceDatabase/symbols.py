@@ -2,7 +2,7 @@
 # @Author: Juan Quintana
 # @Date:   2026-03-28 23:34:49
 # @Last Modified by:   Juan Quintana
-# @Last Modified time: 2026-04-11 16:43:04
+# @Last Modified time: 2026-04-11 21:16:23
 
 import logging
 import os
@@ -67,9 +67,9 @@ def save() -> None:
                     f"Loaded symbols file from 'FinanceDatabase': {num_etfs} {num_indices} {num_funds}"
                 )
                 # save
-                etfs.to_csv(path_etfs, index=False)
-                indices.to_csv(path_indices, index=False)
-                funds.to_csv(path_funds, index=False)
+                etfs.reset_index(drop = False).to_csv(path_etfs, index=False)
+                indices.reset_index(drop = False).to_csv(path_indices, index=False)
+                funds.reset_index(drop = False).to_csv(path_funds, index=False)
                 # display
                 logging.info("Saved symbols files from 'FinanceDatabase'")
                 # return
