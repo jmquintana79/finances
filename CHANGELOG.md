@@ -1,3 +1,9 @@
+## v0.3.0 (2026-04-11)
+
+### Feat
+
+- **data.FinanceDatabase**: moved from io module to data and add cleaning submodule to process symbol data
+
 ## v0.2.1 (2026-04-11)
 
 ### Fix
