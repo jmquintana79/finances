@@ -1,14 +1,15 @@
-
 """DevOps tasks for pyinvoke."""
 
 # %% IMPORTS
 
 import os
 import shutil
+
 from invoke.context import Context
 from invoke.tasks import task
 
 # %% TASKS
+
 
 @task
 def formats(ctx: Context) -> None:
@@ -115,7 +116,7 @@ def clean(c: Context, path: str = ".") -> None:
 
 # %% ALL TASKS
 
+
 @task(pre=[check_code, formats, check_format, docs, clean], default=True)
 def all(_: Context) -> None:
     """Launch all necessary tasks"""
-
