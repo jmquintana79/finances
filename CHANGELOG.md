@@ -1,3 +1,9 @@
+## v0.4.0 (2026-04-12)
+
+### Feat
+
+- **data.Alphavantage**: it was added new source for symbols
+
 ## v0.3.0 (2026-04-11)
 
 ### Feat
