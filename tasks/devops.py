@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+# @Author: Juan Quintana
+# @Date:   2026-03-28 23:34:49
+# @Last Modified by:   Juan Quintana
+# @Last Modified time: 2026-04-18 23:29:27
+
 """DevOps tasks for pyinvoke."""
 
 # %% IMPORTS
@@ -114,9 +120,15 @@ def clean(c: Context, path: str = ".") -> None:
     c.run("ruff clean")
 
 
+@task
+def testing(ctx: Context) -> None:
+    """Launch pytesting"""
+    ctx.run("pytest")
+
+
 # %% ALL TASKS
 
 
-@task(pre=[check_code, formats, check_format, docs, clean], default=True)
+@task(pre=[check_code, formats, check_format, docs, clean, testing], default=True)
 def all(_: Context) -> None:
     """Launch all necessary tasks"""
