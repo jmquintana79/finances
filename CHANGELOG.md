@@ -1,3 +1,9 @@
+## v0.5.0 (2026-04-18)
+
+### Feat
+
+- **io.datasets.processed.symbols**: added load function of this this module with its pytest file and favorites symbols filtering functionality
+
 ## v0.4.0 (2026-04-12)
 
 ### Feat
