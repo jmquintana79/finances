@@ -2,7 +2,7 @@
 # @Author: Juan Quintana
 # @Date:   2026-04-18 22:39:58
 # @Last Modified by:   Juan Quintana
-# @Last Modified time: 2026-04-18 23:19:43
+# @Last Modified time: 2026-04-18 23:45:20
 
 import os
 
@@ -13,12 +13,20 @@ from finances.configs.symbols import favorites
 
 
 def load(with_only_favorites: bool = False) -> pd.DataFrame:
-    """
-    Loads the symbols dataset.
+    """Load all available processed symbols tables
+
+    Keyword Arguments:
+        with_only_favorites {bool} -- Filter only favorite symbols (default: {False})
+
+    Raises:
+        ValueError: If no files are found in the input folder
+        ValueError: If the concatenated dataframe is empty
+        ValueError: If the filtered dataframe is empty when with_only_favorites is True
 
     Returns:
-        pd.DataFrame: The symbols dataset.
-    """
+        pd.DataFrame -- Loaded symbols dataframe.
+    """    
+    
     # input folder
     folder_input = os.path.join(pio.folder_processed, "symbols")
     # list of files in the input folder

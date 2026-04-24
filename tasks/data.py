@@ -2,12 +2,12 @@
 # @Author: Juan Quintana
 # @Date:   2026-04-11 16:19:27
 # @Last Modified by:   Juan Quintana
-# @Last Modified time: 2026-04-12 18:50:18
+# @Last Modified time: 2026-04-18 23:40:52
 
-from finances.data.AlphaVantage.cleaning.symbols import raw_to_processed as raw_to_processed_av
-from finances.data.AlphaVantage.downloader.symbols import save as save_av
-from finances.data.FinanceDatabase.cleaning.symbols import raw_to_processed as raw_to_processed_fd
-from finances.data.FinanceDatabase.downloader.symbols import save as save_fd
+from finances.data.symbols.resources.AlphaVantage.cleaning.symbols import raw_to_processed as raw_to_processed_av
+from finances.data.symbols.resources.AlphaVantage.downloader.symbols import save as save_av
+from finances.data.symbols.resources.FinanceDatabase.cleaning.symbols import raw_to_processed as raw_to_processed_fd
+from finances.data.symbols.resources.FinanceDatabase.downloader.symbols import save as save_fd
 from invoke.context import Context
 from invoke.tasks import task
 

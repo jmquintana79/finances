@@ -2,7 +2,7 @@
 # @Author: Juan Quintana
 # @Date:   2026-03-28 23:34:49
 # @Last Modified by:   Juan Quintana
-# @Last Modified time: 2026-04-12 14:30:29
+# @Last Modified time: 2026-04-18 23:55:43
 
 import os
 
@@ -37,3 +37,4 @@ path_raw_AlphaVantage_symbols = os.path.join(
 # historical / processed / symbols
 path_processed_FinanceDatabase_symbols = os.path.join(folder_symbols, "symbols_FinanceDatabase.csv")
 path_processed_AlphaVantage_symbols = os.path.join(folder_symbols, "symbols_AlphaVantage.csv")
+path_processed_discarded_symbols = os.path.join(folder_symbols, "discarded_symbols.csv")
