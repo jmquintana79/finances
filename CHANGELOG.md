@@ -1,3 +1,9 @@
+## v0.5.1 (2026-04-24)
+
+### Refactor
+
+- **src.data.symbols.validate**: it was developed and loaded a validator of current symbols to check if contain data
+
 ## v0.5.0 (2026-04-18)
 
 ### Feat
